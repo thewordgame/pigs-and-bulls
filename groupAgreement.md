@@ -95,35 +95,36 @@
 
 ### How you will identify tasks, assign tasks, know when they are complete, and manage work in general?
 
-
+- Agree in the meetings, reassign at meetings
 
 ### What project management tool will be used?
 
-
+- git hub projects
 
 ## Git Process
 
 ### What components of your project will live on GitHub?
 
-
+- the repository
 
 ### How will you share the repository with your teammates?
 
-
+- make everyone admins and collaborators
 
 ### What is your Git flow?
 
-
+- new branch for each task, push to dev branch
 
 ### Will you be using a PR review workflow? If so, consider:
 
 - How many people must review a PR?
-
+2 people
 
 - Who merges PRs?
-
+Who ever wrote it
 
 - How often will you merge?
-
+after each completed task || each meeting
 
 - How will you communicate that it’s time to merge?
+Message the slack GC and say you completed task.
