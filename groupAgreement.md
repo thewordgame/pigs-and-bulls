@@ -1,5 +1,7 @@
 # Group Agreement
 
+Tracy Oakley, Don Choi, DeShon Dixon, Martin Hansen
+
 ## Coorporation Plan
 
 ### What are the key strengths of each person on the team?
