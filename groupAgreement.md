@@ -33,3 +33,29 @@ We can use our various skills and abilities to build off of each other. We will 
 - Make sure we check in with our peers to make sure our changes are approved before committing anything.
 
 - Make sure clear task are set don't branch off and do your own thing with out approval from the team.
+
+## Conflict Plan
+
+- What will be your group’s process to resolve conflict, when it arises?
+
+Decide by group vote and defer to the group planning.
+If the issue persist, we can call a planning meeting.
+If a specific github issue, go the TA.
+
+- What will your team do if one person is taking over the project and not letting the other members contribute?
+
+We can plan the tasks out better and involve each other. Incorporate pair programming.
+Contact Sheyna.
+
+
+- How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
+
+Use the group meetings to update each other. And no pressure to have what you are doing completed. Knowing it is a discovery process so the plan will need to be adjusted. **Growth Mindset**
+
+- How will you raise concerns to members who are not adequately contributing?
+
+Make sure we are all up to speed and if unable to meet the time-lines, we will contact Sheyna.
+
+- How and when will you escalate the conflict if your resolution attempts are unsuccessful?
+
+Communicate the Sheyna at the end of the day if resolution is not resolved.
