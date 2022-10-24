@@ -12,3 +12,5 @@
 ## Attribution
 
 - Red Farm Barn Vector from Free-Vectors.Net under this [license](https://creativecommons.org/licenses/by/4.0/)
+
+![Flow Chart](img/Flow.png "Flow Chart")
