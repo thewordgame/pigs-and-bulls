@@ -131,7 +131,7 @@ p {
 td {
   margin: 10rem;
   display:table-cell;
-  justify-content: space-around 5rem;
+  justify-content: center;
   padding: 10px;
   text-align: center;
   padding: 20px 0;
@@ -141,7 +141,32 @@ td {
   font-family: 'Fredoka One';
   background-color: white;
   width: 5rem;
-  height: 5rem;
+  height: 2rem;
   box-shadow: 5px 5px 8px rgb(42, 42, 42);
   border: 2px solid rgb(0, 0, 0);
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 5rem;
+  font-family: 'Nabla';
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+}
+
+#name {
+  width: 10rem;
+  height: 2rem;
+  border-radius: .5rem;
+  background-color: rgb(82, 82, 82);
+  font-family: 'Nabla';
+  font-size: 1.5rem;
 }
