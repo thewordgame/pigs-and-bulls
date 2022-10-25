@@ -1,0 +1,127 @@
+body {
+  background-image: url(../img/408446948.jpg);
+  border-radius: 20px;
+  height: auto;
+  margin: auto;
+  background-size: cover;
+  backdrop-filter:unset;
+}
+
+header h1 {
+  font-family: 'Nabla';
+  font-size: 350%;
+  right: 40%;
+  text-align: center;
+  padding: 4rem;
+  margin: auto;
+  color: rgb(248, 116, 0);
+  text-shadow: 2px 2px 5px rgb(59, 59, 59);
+  width: 25rem;
+  height: 3rem;
+}
+
+h2 {
+  font-family: 'Nabla';
+  font-size: 3rem;
+  letter-spacing: 7rem;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  position: relative;
+  text-align: center;
+  left: 4%;
+  border-bottom: 1rem;
+  width: auto;
+}
+
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+h3 {
+  font-family: 'Nabla';
+  font-size: 1rem;
+  letter-spacing: .3rem;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+  padding-top: 3rem;
+  position: relative;
+  text-align: center;
+  border-bottom: 2rem;
+}
+
+h4 {
+  font-family: 'Nabla';
+  font-size: 1rem;
+  letter-spacing: .3rem;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+  padding-top: 1rem;
+  position: relative;
+  text-align: center;
+  border-bottom: 2rem;
+}
+
+h5 {
+  font-family: 'Nabla';
+  font-size: 1rem;
+  letter-spacing: .3rem;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  position: relative;
+  text-align: center;
+  border-bottom: 2rem;
+}
+
+h6 {
+  font-family: 'Nabla';
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+  padding: 1rem;
+  position: relative;
+  text-align: right;
+  border-bottom: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  gap: 5rem;
+  padding: 10px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 4.5rem;
+}
+
+.grid-item {
+  border-color: black;
+  border-width: 2rem;
+  font-family: 'Fredoka One';
+  background-color: white;
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 5px 5px 8px rgb(42, 42, 42);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+
+footer {
+	margin: 5rem auto;
+  font-size: .6rem;
+  text-align: center;
+  font-family: 'Fredoka One';
+  color: rgb(255, 247, 0);
+  text-shadow: 2px 1.5px 4px black;
+}
+
+p {
+  width: 80rem;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Fredoka One';
+  color: rgb(255, 247, 0);
+  text-shadow: 2px 1.5px 4px black;
+}
