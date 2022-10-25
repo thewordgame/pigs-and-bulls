@@ -7,14 +7,17 @@ let tbody = document.querySelector('tbody');
 //Window into the DOM
 
 
-const Game = function(word) {
-  this.word = word;
+const Game = function(correctWord) {
+  this.correctWord = correctWord;
   this.guessedWords = [];
   this.completed = false;
 };
 
 const testGame = new Game('tiger');
+
 const user = new User(0, [testGame]);
+
+
 
 Game.prototype.addGuess = function(guessedWord) {
   this.guessedWords.push(guessedWord);
@@ -22,17 +25,45 @@ Game.prototype.addGuess = function(guessedWord) {
 
 Game.prototype.renderGame = function() {
   tbody.innerHTML = '';
+  
   for(let i in this.guessedWords){
     let tr = document.createElement('tr');
-    console.log(this.guessedWords[i]);
+
+    let pigsAndBulls = parseWord(this.correctWord, this.guessedWords[i]);
+    let numOfPigs = pigsAndBulls[0];
+    let numOfBulls = pigsAndBulls[1];
+
+    console.log(numOfPigs);
+    console.log(numOfBulls);
+
+    for(let m = 0;m < numOfPigs; m++){
+      let td = document.createElement('td');
+      td.innerHTML = '<img src="../img/cartoonPig.png" alt="pigs">';
+      tr.appendChild(td);
+    }
+
     for(let j in this.guessedWords[i]) {
+
       let td = document.createElement('td');
       let word = this.guessedWords[i][j];
-      console.log(word);
+      
       td.textContent = word;
       tr.appendChild(td);
     }
+
+    for(let n = 0;n < numOfBulls; n++){
+      let td = document.createElement('td');
+      td.innerHTML = '<img src="../img/cartoonBull.png" alt="bulls">';
+      tr.appendChild(td);
+    }
+
+    
+
     tbody.appendChild(tr);
+    if(numOfBulls===5){
+      this.completed=true;
+      
+    }
   }
 };
 
@@ -59,19 +90,6 @@ function parseWord(correctWord, guessWord){
 }
 
 
-// //console.log(parseWord('tiger','words'));
-
-// function renderRow(guessedWord,arrayFromParseFunc){
-//   // need the DOM window
-
-//   // need to create the row
-
-//   //need to attach row to Dom Window
-// }
-
-//eventHandlerFunction
-
-
 
 //EXECUTABLE CODE
 
@@ -79,13 +97,12 @@ function parseWord(correctWord, guessWord){
 
 // 2. Check for the previous game else start new game
 
-// 3. Display the game
-
 function handleSubmit(event) {
   event.preventDefault();
   let guessedWord = event.target.name.value;
   user.addGuess(guessedWord);
   user.games[user.games.length-1].renderGame();
+  user.saveToLocalStorage();
 }
 
 
