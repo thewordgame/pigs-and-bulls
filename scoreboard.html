@@ -15,10 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Nabla&amp;display=swap" rel="stylesheet">
-  <style>
-    
-  </style>
   <title>SCOREBOARD</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <h6>
     <a href="index.html">HOME</a></h6>
 </head>
@@ -27,9 +25,32 @@
     <h1>SCOREBOARD</h1>
 </header>
     <main>
+      <canvas id="myChart" style="width:100%;max-width:600px;;"></canvas>
+      <script>
+        var xValues = ["Highest Score", "Second Score", "Third Score", "Fourth Score", "Lowest Score"];
+        var yValues = [55, 49, 44, 24, 15];
+        var barColors = ["red", "green","blue","orange","brown"];
+        
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+            }
+          }
+        });
+        </script>
 </main>
-</body>
 <footer>
-    © MARTIN HANSEN, DESHON DIXON , DON CHOI, TRACEY OAKLEY
-  </footer>
+  © MARTIN HANSEN, DESHON DIXON , DON CHOI, TRACEY OAKLEY
+</footer>
+</body>
 </html>

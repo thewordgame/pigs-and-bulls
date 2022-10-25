@@ -125,3 +125,11 @@ p {
   color: rgb(255, 247, 0);
   text-shadow: 2px 1.5px 4px black;
 }
+
+#myScoreboard {
+  width: auto;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 85rem;
+	grid-template-rows: 6.5rem 2rem 40rem 40%;
+}
