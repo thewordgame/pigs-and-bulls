@@ -8,21 +8,15 @@ let wordBank = ['sleep', 'seize', 'unbed', 'debit', 'shale', 'skirl', 'plead', '
 //Window into the DOM
 
 
-const game = function(word) {
+const Game = function(word) {
   this.word = word;
   this.guessedWords = [];
   this.completed = false;
 };
 
-game.prototype.check = function() {
-  for(let i of wordBank){
-    if(this.word.toLowercase() === wordBank[i].toLowercase()) {
-      this.completed = true;
-    }
-  }
-  this.guessedWords.push(this.word);
+Game.prototype.addGuess = function(guessedWord) {
+  this.guessedWords.push(guessedWord);
 };
-
 
 
 //ParseWord Function takes 2 strings and returns an array of 2 numbers
@@ -70,4 +64,3 @@ function renderRow(guessedWord,arrayFromParseFunc){
 // 2. Check for the previous game else start new game
 
 // 3. Display the game
-
