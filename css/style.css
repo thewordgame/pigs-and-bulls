@@ -125,3 +125,23 @@ p {
   color: rgb(255, 247, 0);
   text-shadow: 2px 1.5px 4px black;
 }
+
+
+
+td {
+  margin: 10rem;
+  display:table-cell;
+  justify-content: space-around 5rem;
+  padding: 10px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 4.5rem;
+  border-color: black;
+  border-width: 2rem;
+  font-family: 'Fredoka One';
+  background-color: white;
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 5px 5px 8px rgb(42, 42, 42);
+  border: 2px solid rgb(0, 0, 0);
+}
