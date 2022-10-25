@@ -14,15 +14,18 @@ const User = function(score, games){
 // create a new game function
    // creates a number random and choses from the word list and make a new game object.
 User.prototype.createNewGame = function() {
-// create function to generate random word from word bank.
-  let newGame = new Game(word);
+  // create function to generate random word from word bank.
+  randWord = wordBank[Math.floor(Math.random()* (wordBank.length))];
+
+  console.log(randWord);
+  let newGame = new Game(randWord);
   this.games.push(newGame);
 };
 
-// User.prototype.saveToLocalStorage = function () {
-//   let packedUser = JSON.stringify(user);
-//   localStorage.setItem( 'user', packedUser);
-// };
+User.prototype.saveToLocalStorage = function () {
+  let packedUser = JSON.stringify(user);
+  localStorage.setItem( 'user', packedUser);
+};
 
 // function loadUser() {
 //   const userInfo = JSON.parse(localStorage.getItem('user')) || [];
@@ -34,9 +37,6 @@ User.prototype.addGuess = function(word) {
   console.log(this.games[this.games.length-1].guessedWords);
 };
 
-//to do: 
-
-//addGame
 
 //Determine High Score
 
