@@ -4,37 +4,35 @@ let wordBank = ['sleep', 'seize', 'unbed', 'debit', 'shale', 'skirl', 'plead', '
 
 //User constructor and Functions
 
-const user = new user (0, []);
+
 
 const User = function(score, games){
   this.score = score;
   this.games = games;
 };
 
-
-User.prototype.addGame = function(word, guess, complete) {
-  this.games.push(new game(word, guess, complete));
-};
-
-User.prototype.saveToLocalStorage = function () {
-  let packedUser = JSON.stringify(user);
-  localStorage.setItem( 'user', packedUser);
-};
-
-function loadUser() {
-  const userInfo = JSON.parse(localStorage.getItem('user')) || [];
-  user = new User(userInfo);
-};
-
 // create a new game function
    // creates a number random and choses from the word list and make a new game object.
-
 User.prototype.createNewGame = function() {
 // create function to generate random word from word bank.
   let newGame = new Game(word);
   this.games.push(newGame);
-}
+};
 
+// User.prototype.saveToLocalStorage = function () {
+//   let packedUser = JSON.stringify(user);
+//   localStorage.setItem( 'user', packedUser);
+// };
+
+// function loadUser() {
+//   const userInfo = JSON.parse(localStorage.getItem('user')) || [];
+//   let user = new User(userInfo);
+// };
+
+User.prototype.addGuess = function(word) {
+  this.games[this.games.length-1].guessedWords.push(word);
+  console.log(this.games[this.games.length-1].guessedWords);
+};
 
 //to do: 
 
