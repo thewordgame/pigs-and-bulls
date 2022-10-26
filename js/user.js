@@ -3,6 +3,7 @@
 let wordBank = ['tiger', 'light', 'tires', 'waste', 'learn', 'reach', 'value', 'opera', 'maker', 'great', 'prove', 'right', 'debit', 'shelf'];
 
 //User constructor and Functions
+
 const User = function (score, games) {
   this.score = score;
   this.games = games;
@@ -47,16 +48,6 @@ User.prototype.addGuess = function (word) {
   console.log(this.games[this.games.length - 1].guessedWords);
 };
 
-User.prototype.highScore = function () {
-  let tempHighScore = this.games[this.games.length - 1].guessedWords.length;
-  console.log (tempHighScore);
-  if (this.score === 0) {
-    this.score = tempHighScore;
-  } else if (tempHighScore < this.score) {
-    this.score = tempHighScore;
-  }
-  console.log(this.score);
-};
 
 //Determine High Score
 

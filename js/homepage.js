@@ -14,6 +14,7 @@ function loadUser() {
 }
 
 //Executable Code
+
 let user = new User(0, []);
 
 loadUser();
@@ -25,12 +26,14 @@ buttons.addEventListener('click', handleClick);
 
 //need to addeventhandler
 function handleClick(event) {
+
   // let name = event.target.name;
   // //console.log(event.target.id);
   // //console.log(name);
   // if(name === 'playButton'){
   //   window.location.href = "../gamepage.html";
   // }
+
   if (event.target.id === 'newgameButton') {
 
     user.createNewGame();
