@@ -126,29 +126,32 @@ p {
   text-shadow: 2px 1.5px 4px black;
 }
 
-
+tr {
+  display: flex;
+}
 
 td {
-  margin: 10rem;
-  display:table-cell;
-  justify-content: center;
-  padding: 10px;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 4.5rem;
-  border-color: black;
-  border-width: 2rem;
-  font-family: 'Fredoka One';
-  background-color: white;
-  width: 5rem;
-  height: 2rem;
-  box-shadow: 5px 5px 8px rgb(42, 42, 42);
   border: 2px solid rgb(0, 0, 0);
+  box-shadow: 5px 5px 11px rgb(45, 45, 45);
+  background-color: white;
+  margin: 16px;
+  font-family: Fredoka;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  
+  
 }
 
 table {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 form {
@@ -170,6 +173,12 @@ form {
   font-family: 'Nabla';
   font-size: 1.5rem;
 }
+
+
+td img {
+  width: 6rem;
+  padding: 2rem;
+  
 
 
 
