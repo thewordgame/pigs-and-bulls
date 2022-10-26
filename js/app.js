@@ -16,10 +16,19 @@ Game.prototype.renderGame = function() {
     let pigsAndBulls = parseWord(this.correctWord, this.guessedWords[i]);
     let numOfPigs = pigsAndBulls[0];
     let numOfBulls = pigsAndBulls[1];
+    let pigPadding = 5 - numOfPigs;
+    let bullPadding = 5 - numOfBulls;
+    //console.log(numOfPigs);
+    //console.log(numOfBulls);
 
-    console.log(numOfPigs);
-    console.log(numOfBulls);
-
+    
+    for(let l = 0;l < pigPadding; l++){
+      let td = document.createElement('td');
+      td.innerHTML = '';
+      td.setAttribute('id', 'empty' );
+      tr.appendChild(td);
+    }
+    
     for(let m = 0;m < numOfPigs; m++){
       let td = document.createElement('td');
       td.innerHTML = '<img src="../img/cartoonPig.png" alt="pigs">';
@@ -38,6 +47,13 @@ Game.prototype.renderGame = function() {
     for(let n = 0;n < numOfBulls; n++){
       let td = document.createElement('td');
       td.innerHTML = '<img src="../img/cartoonBull.png" alt="bulls">';
+      tr.appendChild(td);
+    }
+
+    for(let l = 0;l < bullPadding; l++){
+      let td = document.createElement('td');
+      td.innerHTML = '';
+      td.setAttribute('id', 'empty' );
       tr.appendChild(td);
     }
 
