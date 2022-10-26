@@ -6,16 +6,9 @@ function loadUser() {
     user.score = 0;
     user.games = [];
   }
-  console.log(user);
 }
 
 loadUser();
-
-//total games played
-console.log(user.games.length);
-//best score
-console.log(user.score);
-//games completed vs games played
 
 function calcWinPercent(){
   let completed = 0;
@@ -31,17 +24,11 @@ function calcWinPercent(){
   return winPercent;
 }
 
-console.log(calcWinPercent());
-calcWinPercent();
-
 function renderScoreboard() {
   let bestGame = document.getElementById('bestGame');
   let totalGames = document.getElementById('totalGames');
   let completedPercent = document.getElementById('completedPercent');
-  console.log(bestGame);
-  console.log(totalGames);
-  console.log(completedPercent);
-  bestGame.innerHTML = `Best Game: ${user.score}`;
+  bestGame.innerHTML = `Best Game: ${user.score} guesses`;
   totalGames.innerHTML = `Games Played: ${user.games.length}`;
   completedPercent.innerHTML = `Percentage Of Games Completed: ${calcWinPercent()}%`;
 }
