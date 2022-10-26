@@ -188,7 +188,7 @@ td img {
 }
 
 #newgameButton:hover{
-
+  color: white;
 }
 
 .modal {
@@ -207,24 +207,28 @@ td img {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
   width: 80%;
+}
+
+.modal-content p {
+  background-color: lightblue;
+  text-align: center;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: center;
+  color: black;
   font-size: 28px;
   font-weight: bold;
 }
 
+
+
 .close:hover,
 .close:focus {
-  color: #000;
+  color: red;
   text-decoration: none;
 
   cursor: pointer;
