@@ -5,8 +5,8 @@
 function loadUser() {
   const userGames = JSON.parse(localStorage.getItem('user')) || [];
   console.log(userGames);
-  user = new User(userGames.score,userGames.games);
-  if(user.games === undefined){
+  user = new User(userGames.score, userGames.games);
+  if (user.games === undefined) {
     user.score = 0;
     user.games = [];
   }
@@ -15,7 +15,7 @@ function loadUser() {
 
 //Executable Code
 
-let user = new User(0,[]);
+let user = new User(0, []);
 
 loadUser();
 
@@ -25,8 +25,8 @@ let buttons = document.getElementById('actionButtons');
 buttons.addEventListener('click', handleClick);
 
 //need to addeventhandler
-function handleClick(event){
-  
+function handleClick(event) {
+
   // let name = event.target.name;
   // //console.log(event.target.id);
   // //console.log(name);
@@ -34,8 +34,8 @@ function handleClick(event){
   //   window.location.href = "../gamepage.html";
   // }
 
-  if(event.target.id === 'newgameButton'){
-    
+  if (event.target.id === 'newgameButton') {
+
     user.createNewGame();
     user.saveToLocalStorage();
     window.location.href = "../gamepage.html";
