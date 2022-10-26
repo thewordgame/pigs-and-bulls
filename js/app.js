@@ -21,7 +21,6 @@ Game.prototype.renderGame = function () {
     //console.log(numOfPigs);
     //console.log(numOfBulls);
 
-
     for (let l = 0; l < pigPadding; l++) {
       let td = document.createElement('td');
       td.innerHTML = '';
@@ -30,6 +29,7 @@ Game.prototype.renderGame = function () {
     }
 
     for (let m = 0; m < numOfPigs; m++) {
+
       let td = document.createElement('td');
       td.innerHTML = '<img src="../img/cartoonPig.png" alt="pigs">';
       tr.appendChild(td);
@@ -71,7 +71,6 @@ Game.prototype.renderGame = function () {
 // --------*   modal    *-------- //
 function modal() {
   let modal = document.getElementById('myModal');
-  let btn = document.getElementById('myBtn');
   let span = document.getElementsByClassName('close')[0];
 
   btn.onclick = function () {
