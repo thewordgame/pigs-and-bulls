@@ -75,17 +75,32 @@ function modal() {
   let modal = document.getElementById('myModal');
   let span = document.getElementsByClassName('close')[0];
 
-  btn.onclick = function () {
-    modal.style.display = 'block';
-  };
+  let button1 = document.getElementById('bottom-button1');
+  let button2 = document.getElementById('bottom-button2');
 
-  span.onlick = function () {
+  modal.style.display = 'block';
+
+  span.onlick = function() {
     modal.style.display = 'none';
   };
 
-  window.onclick = function (event) {
-    if (event.target === modal) {
+  span.onclick = function(event) {
+    if(event.target === modal) {
       modal.style.display = 'none';
+    }
+  };
+
+  button1.onclick = function(event){
+    if(event.target === button1) {
+      user.createNewGame();
+      user.saveToLocalStorage();
+      window.location.href = '../gamepage.html';
+    }
+  };
+
+  button2.onclick = function(event){
+    if(event.target === button2) {
+      window.location.href = '../scoreboard.html';
     }
   };
 }

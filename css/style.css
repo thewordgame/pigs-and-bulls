@@ -264,8 +264,12 @@ h2{
 }
 
 .modal-content p {
+  font-size: 60px;
   background-color: lightblue;
   text-align: center;
+  height:auto;
+  width:auto;
+  border-radius:20px;
 }
 
 /* The Close Button */
@@ -275,30 +279,52 @@ h2{
   font-weight: bold;
 }
 
+.modal-header {
+  display:flex;
+  justify-content: right;
+}
+
+.modal-body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-body p {
+  padding:1rem;
+}
+
+#bottom-button1{
+  color:rgb(255, 247, 0);
+  text-shadow: 2px 1.5px 4px black;
+  font-family: 'Fredoka One';
+  font-size: 50px;
+  background-color:lightblue;
+  float:left;
+  border-radius:20px;
+}
+
+#bottom-button2{
+  color:rgb(255, 247, 0);
+  text-shadow: 2px 1.5px 4px black;
+  font-family: 'Fredoka One';
+  font-size: 50px;
+  background-color:lightblue;
+  float:right;
+  border-radius:20px;
+}
+
+#bottom-button1:hover,
+#bottom-button2:hover{
+  font-size:70px;
+  cursor: pointer;
+}
 
 .close:hover,
 .close:focus {
   color: red;
   text-decoration: none;
   cursor: pointer;
-}
-
-button {
-  font-family: 'Fredoka One';
-  margin: auto;
-  display: flex;
-  font-size:2.3rem;
-  flex-direction: row;
-  justify-content: center; 
-  align-items: center;
-  color: rgb(0, 0, 0);
-  border-style: outset;
-  border-color: rgb(246, 230, 0);
-  border-width: 7px;
-  border-radius: 1rem;
-  background-color: rgb(255, 247, 0);
-  height: 3.5rem;
-  width: 7rem;
+  
 }
 
 .pig{
