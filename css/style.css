@@ -35,6 +35,15 @@ h2 {
   width: auto;
 }
 
+.score h2 {
+  margin: 5rem auto;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Fredoka One';
+  color: rgb(255, 247, 0);
+  text-shadow: 2px 1.5px 4px black;
+  letter-spacing: 1rem;
+}
 
 a:link {
   background-color: transparent;
