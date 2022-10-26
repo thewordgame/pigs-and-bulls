@@ -175,6 +175,23 @@ form {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+#playButton:hover {
+  background: black;
+  cursor: pointer;
+}
+
+#newgameButton:hover{
+
 td img {
   width: 6rem;
   padding: 2rem;
@@ -217,5 +234,6 @@ td img {
 .close:focus {
   color: #000;
   text-decoration: none;
+
   cursor: pointer;
 }

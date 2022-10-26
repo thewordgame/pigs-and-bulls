@@ -1,28 +1,43 @@
 'use strict';
 
 // pull from local storage and check for previous games
+
 function loadUser() {
   const userGames = JSON.parse(localStorage.getItem('user')) || [];
-  user = new User(userGames);
+  console.log(userGames);
+  user = new User(userGames.score,userGames.games);
+  if(user.games === undefined){
+    user.score = 0;
+    user.games = [];
+  }
   console.log(user);
-  
 }
 
-  //conditional statement that checks local storage to see if there is game if there isn't a game it does not the display the button.
+//Executable Code
 
-// user clicks on new game(add window to DOM)
-/*
+let user = new User(0,[]);
+
+loadUser();
+
 let buttons = document.getElementById('actionButtons');
-  //needs an eventlistener
-  buttons.addEventListener('click', handleClick);
-  //need to addeventhandler
-  function handleClick(event){
 
-  }
+//needs an eventlistener
+buttons.addEventListener('click', handleClick);
 
-  */
-//need to make a new object pulling from app.js
-      
+//need to addeventhandler
+function handleClick(event){
   
+  // let name = event.target.name;
+  // //console.log(event.target.id);
+  // //console.log(name);
+  // if(name === 'playButton'){
+  //   window.location.href = "../gamepage.html";
+  // }
 
-// if select new game just delete the last unfinished game and continue to game page with app.js
+  if(event.target.id === 'newgameButton'){
+    
+    user.createNewGame();
+    user.saveToLocalStorage();
+    window.location.href = "../gamepage.html";
+  }
+}
