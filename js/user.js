@@ -1,25 +1,40 @@
 'use strict';
 
-let wordBank = ['sleep', 'seize', 'unbed', 'debit', 'shale', 'skirl', 'plead', 'waste', 'bench', 'caked', 'alibi', 'capra', 'trump', 'right', 'shelf', 'cloff', 'value', 'maker', 'allow', 'hying', 'spoon', 'valid', 'poket', 'hoker', 'raise', 'shell', 'river', 'erase', 'wench', 'rival', 'spike', 'daisy', 'rapid', 'learn', 'reach', 'truth', 'pocky', 'azure', 'opera', 'prove', 'women', 'forth', 'apple', 'happy', 'angle', 'topic', 'lunch', 'treat'];
+let wordBank = ['tiger','light','tires','waste','learn','reach','value','opera','maker','great','prove', 'right', 'debit', 'shelf'];
 
 //User constructor and Functions
-
-
 
 const User = function(score, games){
   this.score = score;
   this.games = games;
 };
 
+// Game constructor (need it here to create new games from homepage)
+const Game = function(correctWord, guessedWords = [], completed = false) {
+  this.correctWord = correctWord;
+  this.guessedWords = guessedWords;
+  this.completed = completed;
+};
+
 // create a new game function
-   // creates a number random and choses from the word list and make a new game object.
 User.prototype.createNewGame = function() {
   // create function to generate random word from word bank.
-  randWord = wordBank[Math.floor(Math.random()* (wordBank.length))];
-
+  let randWord = wordBank[Math.floor(Math.random()* (wordBank.length))];
   console.log(randWord);
+
+  //add a way to ensure a word is not used twice in a row
+  if(this.games.length > 1){
+    while((this.games[this.games.length -1].correctWord === randWord)){
+      let randWord = wordBank[Math.floor(Math.random()* (wordBank.length))];
+      console.log(randWord);
+    }
+  }
+
   let newGame = new Game(randWord);
   this.games.push(newGame);
+
+  
+
 };
 
 User.prototype.saveToLocalStorage = function () {
@@ -27,10 +42,6 @@ User.prototype.saveToLocalStorage = function () {
   localStorage.setItem( 'user', packedUser);
 };
 
-// function loadUser() {
-//   const userInfo = JSON.parse(localStorage.getItem('user')) || [];
-//   let user = new User(userInfo);
-// };
 
 User.prototype.addGuess = function(word) {
   this.games[this.games.length-1].guessedWords.push(word);
@@ -41,6 +52,3 @@ User.prototype.addGuess = function(word) {
 //Determine High Score
 
 //Determine Completed Percentage
-
-// create a delete a game function
-  //add an alert

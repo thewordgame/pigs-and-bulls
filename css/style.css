@@ -170,3 +170,23 @@ form {
   font-family: 'Nabla';
   font-size: 1.5rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+#playButton:hover {
+  background: black;
+  cursor: pointer;
+}
+
+#newgameButton:hover{
+  cursor: pointer;
+}
