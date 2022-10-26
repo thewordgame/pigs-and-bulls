@@ -9,7 +9,7 @@ let tbody = document.querySelector('tbody');
 
 Game.prototype.renderGame = function() {
   tbody.innerHTML = '';
-  
+
   for(let i in this.guessedWords){
     let tr = document.createElement('tr');
 
@@ -30,7 +30,7 @@ Game.prototype.renderGame = function() {
 
       let td = document.createElement('td');
       let word = this.guessedWords[i][j];
-      
+
       td.textContent = word;
       tr.appendChild(td);
     }
@@ -41,15 +41,41 @@ Game.prototype.renderGame = function() {
       tr.appendChild(td);
     }
 
-    
-
     tbody.appendChild(tr);
     if(numOfBulls===5){
       this.completed=true;
+
       alert('Congrats, we need to add modal here.')
+
+      modal();
+      break;
+
     }
   }
 };
+
+
+// --------*   modal    *-------- //
+function modal() {
+  let modal = document.getElementById('myModal');
+  let btn = document.getElementById('myBtn');
+  let span = document.getElementsByClassName('close')[0];
+
+  btn.onclick = function() {
+    modal.style.display = 'block';
+  };
+
+  span.onlick = function() {
+    modal.style.display = 'none';
+  };
+
+  window.onclick = function(event) {
+    if(event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+}
+
 
 //ParseWord Function takes 2 strings and returns an array of 2 numbers
 
@@ -85,7 +111,12 @@ function handleSubmit(event) {
 
 //EXECUTABLE CODE
 
+
 // 1. Attach eventlistenertotheDOM for the form
+
+
+
+
 form.addEventListener('submit', handleSubmit);
 
 // 2. Check for the previous game else start new game
