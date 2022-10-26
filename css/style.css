@@ -8,25 +8,26 @@ body {
 }
 
 header h1 {
-  font-family: 'Nabla';
+  font-family: 'Fredoka One';
   font-size: 350%;
   right: 40%;
   text-align: center;
   padding: 4rem;
   margin: auto;
-  color: rgb(248, 116, 0);
+  color:rgba(255, 105, 10 , 1);
   text-shadow: 2px 2px 5px rgb(59, 59, 59);
-  width: 25rem;
+  width: 35rem;
   height: 3rem;
 }
 
 h2 {
   font-family: 'Nabla';
   font-size: 3rem;
-  letter-spacing: 7rem;
+  letter-spacing: 6rem;
+  border: 10px dotted transparent;
   text-shadow: 2px 2px 5px rgb(23, 23, 23);
-  padding-top: 6rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   position: relative;
   text-align: center;
   left: 4%;
@@ -34,9 +35,11 @@ h2 {
   width: auto;
 }
 
+
 a:link {
   background-color: transparent;
   text-decoration: none;
+  
 }
 
 h3 {
@@ -197,18 +200,46 @@ form {
 td img {
   width: 6rem;
   padding: 2rem;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+h2{
+  display: flex;
+  justify-content: space-around;
+}
+
+#playButton{
+  text-align: center;
+  font-family: 'Nabla';
+  font-size: 3rem;
+  letter-spacing: 6rem;
+  border: 10px dotted transparent;
+  text-shadow: 2px 2px 5px rgb(23, 23, 23);
+  padding: 2rem 0 2rem 6rem;
+  position: relative;
+  right:3%;
+  text-align: center;
+  width: auto;
 }
 
 #playButton:hover {
-  border: 10px dotted black;
-  padding: 15px;
-  
+  border: 10px solid rgba(0,0,0,0.4);
+  padding: 2rem 0 2rem 6rem;
+  background-color: rgba(0,0,0,0.2);
   background-clip: padding-box;
   cursor: pointer;
 }
 
 #newgameButton:hover{
   color: white;
+  cursor: pointer;
+}
+
+#scoreboardButton:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .modal {
@@ -245,7 +276,6 @@ td img {
 }
 
 
-
 .close:hover,
 .close:focus {
   color: red;
@@ -269,4 +299,37 @@ button {
   background-color: rgb(255, 247, 0);
   height: 3.5rem;
   width: 7rem;
+}
+
+.pig{
+  animation-duration: 4s;
+  transition-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-name: pigRoll;
+}
+
+.bull{
+  animation-duration: 2s;
+  transition-timing-function: ease;
+  animation-iteration-count: 2;
+  animation-name: cowRoll;
+}
+
+@keyframes cowRoll {
+  
+   0%{transform:rotate(0deg);} 
+   25%{transform:rotate(20deg);}
+   75%{transform:rotate(-20deg);}
+   100%{transform:rotate(0deg);}
+  
+}
+
+@keyframes pigRoll {
+  
+  0%{transform:rotate(0deg);} 
+  25%{transform:rotate(180deg);}
+  50%{transform:rotate(0deg);}
+  75%{transform:rotate(-180deg);}
+  100%{transform:rotate(0deg);}
+ 
 }
