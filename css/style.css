@@ -166,7 +166,7 @@ td {
 
 #empty{
   background-color: transparent;
-  border: 0;
+  border: 3px solid transparent;
   box-shadow: none;
 }
 
