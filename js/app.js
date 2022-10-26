@@ -6,7 +6,6 @@ let form = document.querySelector('form');
 let tbody = document.querySelector('tbody');
 
 //render the WordBoard on the game page
-
 Game.prototype.renderGame = function () {
   tbody.innerHTML = '';
 
@@ -59,14 +58,13 @@ Game.prototype.renderGame = function () {
 
     tbody.appendChild(tr);
     if (numOfBulls === 5) {
+      user.highScore();
       this.completed = true;
-
       modal();
       break;
     }
   }
 };
-
 
 // --------*   modal    *-------- //
 function modal() {
@@ -88,9 +86,7 @@ function modal() {
   };
 }
 
-
 //ParseWord Function takes 2 strings and returns an array of 2 numbers
-
 function parseWord(correctWord, guessWord) {
 
   let numberOfPigs = 0;
@@ -123,16 +119,10 @@ function handleSubmit(event) {
 
 //EXECUTABLE CODE
 
-
 // 1. Attach eventlistenertotheDOM for the form
-
-
-
-
 form.addEventListener('submit', handleSubmit);
 
 // 2. Check for the previous game else start new game
-
 let user = new User(0, []);
 loadUser();
 
@@ -141,7 +131,6 @@ user.games[user.games.length - 1].renderGame();
 
 
 function loadUser() {
-
   const userGames = JSON.parse(localStorage.getItem('user')) || new User(0, []);
   console.log(userGames);
 
