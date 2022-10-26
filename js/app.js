@@ -73,22 +73,22 @@ Game.prototype.renderGame = function () {
 // --------*   modal    *-------- //
 function modal() {
   let modal = document.getElementById('myModal');
-  let span = document.getElementsByClassName('close')[0];
+  // let span = document.getElementsByClassName('close')[0];
 
   let button1 = document.getElementById('bottom-button1');
   let button2 = document.getElementById('bottom-button2');
 
   modal.style.display = 'block';
 
-  span.onlick = function() {
-    modal.style.display = 'none';
-  };
+  // span.onlick = function() {
+  //   modal.style.display = 'none';
+  // };
 
-  span.onclick = function(event) {
-    if(event.target === modal) {
-      modal.style.display = 'none';
-    }
-  };
+  // span.onclick = function(event) {
+  //   if(event.target === modal) {
+  //     modal.style.display = 'none';
+  //   }
+  // };
 
   button1.onclick = function(event){
     if(event.target === button1) {
