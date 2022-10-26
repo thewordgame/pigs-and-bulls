@@ -161,6 +161,12 @@ td {
   
 }
 
+#empty{
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
 table {
   display: flex;
   align-items: center;
@@ -188,6 +194,11 @@ form {
   font-size: 1.5rem;
 }
 
+td img {
+  width: 6rem;
+  padding: 2rem;
+}
+
 #playButton:hover {
   border: 10px dotted black;
   padding: 15px;
@@ -197,11 +208,6 @@ form {
 }
 
 #newgameButton:hover{
-}
-
-td img {
-  width: 6rem;
-  padding: 2rem;
 }
 
 .modal {
@@ -230,7 +236,7 @@ td img {
 /* The Close Button */
 .close {
   color: #aaaaaa;
-  float: right;
+  float: center;
   font-size: 28px;
   font-weight: bold;
 }
