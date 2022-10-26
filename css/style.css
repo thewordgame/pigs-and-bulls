@@ -148,6 +148,12 @@ td {
   
 }
 
+#empty{
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
 table {
   display: flex;
   align-items: center;
