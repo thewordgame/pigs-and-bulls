@@ -40,9 +40,10 @@ a:link {
 }
 
 h3 {
-  font-family: 'Nabla';
+  font-family: 'Fredoka One';
   font-size: 1rem;
   letter-spacing: .3rem;
+  color:rgb(255, 247, 0);
   text-shadow: 2px 2px 5px rgb(23, 23, 23);
   padding-top: 3rem;
   position: relative;
@@ -51,7 +52,8 @@ h3 {
 }
 
 h4 {
-  font-family: 'Nabla';
+  font-family: 'Fredoka One';
+  color:rgb(255, 247, 0);
   font-size: 1rem;
   letter-spacing: .3rem;
   text-shadow: 2px 2px 5px rgb(23, 23, 23);
@@ -61,8 +63,14 @@ h4 {
   border-bottom: 2rem;
 }
 
+h4 a {
+  text-decoration: none;
+  color:rgb(255, 247, 0);
+}
+
 h5 {
-  font-family: 'Nabla';
+  font-family: 'Fredoka One';
+  color:rgb(255, 247, 0);
   font-size: 1rem;
   letter-spacing: .3rem;
   text-shadow: 2px 2px 5px rgb(23, 23, 23);
@@ -71,6 +79,11 @@ h5 {
   position: relative;
   text-align: center;
   border-bottom: 2rem;
+}
+
+h5 a {
+  text-decoration: none;
+  color:rgb(255, 247, 0);
 }
 
 h6 {
@@ -135,7 +148,7 @@ td {
   box-shadow: 5px 5px 11px rgb(45, 45, 45);
   background-color: white;
   margin: 16px;
-  font-family: Fredoka;
+  font-family: 'Fredoka One';
   font-size: 2rem;
   font-weight: 700;
   height: 3rem;
@@ -165,9 +178,10 @@ form {
   justify-content: center;
   position: relative;
   padding: 5rem;
-  font-family: 'Nabla';
+  font-family: 'Fredoka One';
   font-size: 2rem;
   letter-spacing: .3rem;
+  color: rgb(255, 247, 0);
   text-shadow: 2px 2px 5px rgb(23, 23, 23);
 }
 
@@ -175,13 +189,10 @@ form {
   width: 10rem;
   height: 2rem;
   border-radius: .5rem;
-  background-color: rgb(82, 82, 82);
-  font-family: 'Nabla';
+  background-color: rgb(255, 255, 255);
+  font-family: 'Fredoka One';
   font-size: 1.5rem;
 }
-
-
-
 
 td img {
   width: 6rem;
@@ -189,12 +200,14 @@ td img {
 }
 
 #playButton:hover {
-  background: black;
+  border: 10px dotted black;
+  padding: 15px;
+  
+  background-clip: padding-box;
   cursor: pointer;
 }
 
 #newgameButton:hover{
-
 }
 
 .modal {
@@ -232,6 +245,23 @@ td img {
 .close:focus {
   color: #000;
   text-decoration: none;
-
   cursor: pointer;
+}
+
+button {
+  font-family: 'Fredoka One';
+  margin: auto;
+  display: flex;
+  font-size:2.3rem;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  color: rgb(0, 0, 0);
+  border-style: outset;
+  border-color: rgb(246, 230, 0);
+  border-width: 7px;
+  border-radius: 1rem;
+  background-color: rgb(255, 247, 0);
+  height: 3.5rem;
+  width: 7rem;
 }
