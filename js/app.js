@@ -45,11 +45,8 @@ Game.prototype.renderGame = function() {
     if(numOfBulls===5){
       this.completed=true;
 
-      alert('Congrats, we need to add modal here.')
-
       modal();
       break;
-
     }
   }
 };

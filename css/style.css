@@ -177,13 +177,10 @@ form {
 
 
 
-
-
-
-
-
-
-
+td img {
+  width: 6rem;
+  padding: 2rem;
+}
 
 #playButton:hover {
   background: black;
@@ -192,12 +189,7 @@ form {
 
 #newgameButton:hover{
 
-td img {
-  width: 6rem;
-  padding: 2rem;
-  
-
-
+}
 
 .modal {
   display: none; /* Hidden by default */
@@ -225,7 +217,7 @@ td img {
 /* The Close Button */
 .close {
   color: #aaaaaa;
-  float: right;
+  float: center;
   font-size: 28px;
   font-weight: bold;
 }
