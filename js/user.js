@@ -48,7 +48,6 @@ User.prototype.addGuess = function (word) {
   console.log(this.games[this.games.length - 1].guessedWords);
 };
 
-
 //Determine High Score
 
 //Determine Completed Percentage

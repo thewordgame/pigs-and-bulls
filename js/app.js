@@ -6,7 +6,6 @@ let form = document.querySelector('form');
 let tbody = document.querySelector('tbody');
 
 //render the WordBoard on the game page
-
 Game.prototype.renderGame = function () {
   tbody.innerHTML = '';
 
@@ -31,7 +30,7 @@ Game.prototype.renderGame = function () {
     for (let m = 0; m < numOfPigs; m++) {
 
       let td = document.createElement('td');
-      td.setAttribute('class', 'pig' );
+      td.setAttribute('class', 'pig');
       td.innerHTML = '<img src="./img/cartoonPig.png" alt="pigs">';
       tr.appendChild(td);
     }
@@ -47,7 +46,7 @@ Game.prototype.renderGame = function () {
 
     for (let n = 0; n < numOfBulls; n++) {
       let td = document.createElement('td');
-      td.setAttribute('class', 'bull' );
+      td.setAttribute('class', 'bull');
       td.innerHTML = '<img src="./img/cartoonBull.png" alt="bulls">';
       tr.appendChild(td);
     }
@@ -80,26 +79,16 @@ function modal() {
 
   modal.style.display = 'block';
 
-  // span.onlick = function() {
-  //   modal.style.display = 'none';
-  // };
-
-  // span.onclick = function(event) {
-  //   if(event.target === modal) {
-  //     modal.style.display = 'none';
-  //   }
-  // };
-
-  button1.onclick = function(event){
-    if(event.target === button1) {
+  button1.onclick = function (event) {
+    if (event.target === button1) {
       user.createNewGame();
       user.saveToLocalStorage();
       window.location.href = './gamepage.html';
     }
   };
 
-  button2.onclick = function(event){
-    if(event.target === button2) {
+  button2.onclick = function (event) {
+    if (event.target === button2) {
       window.location.href = './scoreboard.html';
     }
   };
@@ -107,7 +96,6 @@ function modal() {
 
 
 //ParseWord Function takes 2 strings and returns an array of 2 numbers
-
 function parseWord(correctWord, guessWord) {
 
   let numberOfPigs = 0;
@@ -142,9 +130,6 @@ function handleSubmit(event) {
 
 
 // 1. Attach eventlistenertotheDOM for the form
-
-
-
 
 form.addEventListener('submit', handleSubmit);
 
