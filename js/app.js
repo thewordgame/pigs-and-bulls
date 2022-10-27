@@ -60,8 +60,8 @@ Game.prototype.renderGame = function () {
 
     tbody.appendChild(tr);
     if (numOfBulls === 5) {
+      user.highScore();
       this.completed = true;
-
       modal();
       break;
     }

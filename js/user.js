@@ -48,6 +48,16 @@ User.prototype.addGuess = function (word) {
   console.log(this.games[this.games.length - 1].guessedWords);
 };
 
+User.prototype.highScore = function () {
+  let tempHighScore = this.games[this.games.length - 1].guessedWords.length;
+  console.log (tempHighScore);
+  if (this.score === 0) {
+    this.score = tempHighScore;
+  } else if (tempHighScore < this.score) {
+    this.score = tempHighScore;
+  }
+  console.log(this.score);
+};
 //Determine High Score
 
 //Determine Completed Percentage
