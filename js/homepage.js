@@ -31,13 +31,13 @@ function handleClick(event) {
   // //console.log(event.target.id);
   // //console.log(name);
   // if(name === 'playButton'){
-  //   window.location.href = "gamepage.html";
+  //   window.location.href = "../gamepage.html";
   // }
 
   if (event.target.id === 'newgameButton') {
 
     user.createNewGame();
     user.saveToLocalStorage();
-    window.location.href = "gamepage.html";
+    window.location.href = "../gamepage.html";
   }
 }

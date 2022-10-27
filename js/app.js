@@ -32,7 +32,7 @@ Game.prototype.renderGame = function () {
 
       let td = document.createElement('td');
       td.setAttribute('class', 'pig' );
-      td.innerHTML = '<img src="img/cartoonPig.png" alt="pigs">';
+      td.innerHTML = '<img src="../img/cartoonPig.png" alt="pigs">';
       tr.appendChild(td);
     }
 
@@ -48,7 +48,7 @@ Game.prototype.renderGame = function () {
     for (let n = 0; n < numOfBulls; n++) {
       let td = document.createElement('td');
       td.setAttribute('class', 'bull' );
-      td.innerHTML = '<img src="img/cartoonBull.png" alt="bulls">';
+      td.innerHTML = '<img src="../img/cartoonBull.png" alt="bulls">';
       tr.appendChild(td);
     }
 
@@ -94,13 +94,13 @@ function modal() {
     if(event.target === button1) {
       user.createNewGame();
       user.saveToLocalStorage();
-      window.location.href = 'gamepage.html';
+      window.location.href = '../gamepage.html';
     }
   };
 
   button2.onclick = function(event){
     if(event.target === button2) {
-      window.location.href = 'scoreboard.html';
+      window.location.href = '../scoreboard.html';
     }
   };
 }
