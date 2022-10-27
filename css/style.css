@@ -5,6 +5,8 @@ body {
   margin: auto;
   background-size: cover;
   backdrop-filter:unset;
+  background-repeat: no-repeat;
+  background-color: rgb(149,170,20);
 }
 
 header h1 {
@@ -370,7 +372,8 @@ h2{
 }
 
 #bouncingPig{
-  position: absolute;
+  margin: auto;
+  position: relative; top: 9rem;
   z-index: -1 ;
   left: 25rem;
   bottom: -1rem;
@@ -396,10 +399,11 @@ h2{
 
 
 #bouncingBull{
-  position: absolute;
+  margin: auto;
+  position: relative; top: 9rem;
   z-index: -1 ;
-  right: 9rem;
-  bottom: 0rem;
+  left: 69rem;
+  bottom: -1rem;
   animation-duration: 4s;
   animation-delay: 1s;
   transition-timing-function: ease;
@@ -413,10 +417,27 @@ h2{
     
   25%{transform:rotate(10deg);}
 
-  50%{bottom:2.5rem;right: 9rem;transform:rotate(0deg);}
+  50%{bottom: 0rem;right: 9rem;transform:rotate(0deg);}
 
   75%{transform:rotate(-10deg);}
 
   100%{bottom:0rem;right: 9rem;transform:rotate(0deg);}
+
+  /*-----------------------------------------------
+/*{
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+  -webkit-animation: mover 1s infinite  alternate;
+
+  animation: { mover 1s infinite  alternate;}
+
+  0% { transform: translateY(0); }
+
+  100% { transform: translateY(-10px); }
+
+  0% { transform: translateY(0); }
+
+  100% { transform: translateY(-10px); }
  
 }
+ 
