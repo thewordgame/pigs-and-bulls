@@ -20,21 +20,15 @@ const Game = function (correctWord, guessedWords = [], completed = false) {
 User.prototype.createNewGame = function () {
   // create function to generate random word from word bank.
   let randWord = wordBank[Math.floor(Math.random() * (wordBank.length))];
-  console.log(randWord);
 
-  //add a way to ensure a word is not used twice in a row
   if (this.games.length > 1) {
     while ((this.games[this.games.length - 1].correctWord === randWord)) {
-      let randWord = wordBank[Math.floor(Math.random() * (wordBank.length))];
-      console.log(randWord);
+      randWord = wordBank[Math.floor(Math.random() * (wordBank.length))];
     }
   }
 
   let newGame = new Game(randWord);
   this.games.push(newGame);
-
-
-
 };
 
 User.prototype.saveToLocalStorage = function () {
