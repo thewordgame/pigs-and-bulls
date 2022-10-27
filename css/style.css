@@ -368,3 +368,55 @@ h2{
   100%{transform:rotate(0deg);}
  
 }
+
+#bouncingPig{
+  position: absolute;
+  z-index: -1 ;
+  left: 25rem;
+  bottom: -1rem;
+  animation-duration: 4s;
+  transition-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: pigRollout;
+}
+
+@keyframes pigRollout {
+  
+  0%{bottom:-1rem;left: 25rem;transform:rotate(0deg);}
+    
+  25%{transform:rotate(80deg);}
+
+  50%{bottom:-1rem;left: 28rem;transform:rotate(0deg);}
+
+  75%{transform:rotate(-80deg);}
+
+  100%{bottom:-1rem;left: 25rem;transform:rotate(0deg);}
+ 
+}
+
+
+#bouncingBull{
+  position: absolute;
+  z-index: -1 ;
+  right: 9rem;
+  bottom: 0rem;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  transition-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: bullBounce;
+}
+
+@keyframes bullBounce {
+  
+  0%{bottom:0rem;right: 9rem;transform:rotate(0deg);}
+    
+  25%{transform:rotate(10deg);}
+
+  50%{bottom:2.5rem;right: 9rem;transform:rotate(0deg);}
+
+  75%{transform:rotate(-10deg);}
+
+  100%{bottom:0rem;right: 9rem;transform:rotate(0deg);}
+ 
+}
