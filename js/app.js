@@ -97,6 +97,9 @@ function modal() {
 
 //ParseWord Function takes 2 strings and returns an array of 2 numbers
 function parseWord(correctWord, guessWord){
+
+  correctWord = correctWord.toLowerCase();
+  guessWord = guessWord.toLowerCase();
   
   let numberOfPigs = 0;
   let numberOfBulls = 0;
@@ -113,6 +116,7 @@ function parseWord(correctWord, guessWord){
 
 //Determine Bulls and remove letters
   for( let i in correctWordArray){
+    //doesn't actually need an inner loop - haha
     for(let j in guessWordArray){
       if(correctWordArray[i]===guessWordArray[j] && i === j){
         numberOfBulls++;
@@ -124,15 +128,18 @@ function parseWord(correctWord, guessWord){
 
   for( let i in correctWordArray){
     for(let j in guessWordArray){
-      if(correctWordArray[i]===guessWordArray[j] && i !== j){
+      if(correctWordArray[i]===guessWordArray[j]){
         numberOfPigs++;
         correctWordArray.splice(i,1,1);
+        guessWordArray.splice(j,1,0);
+        //break;
       }
     }
   }
   let result = [numberOfPigs,numberOfBulls];
   return(result);
 }
+
 
 
 function handleSubmit(event) {
