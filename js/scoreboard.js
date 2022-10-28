@@ -38,12 +38,9 @@ function renderScoreboard() {
   let bestGame = document.getElementById('bestGame');
   let totalGames = document.getElementById('totalGames');
   let completedPercent = document.getElementById('completedPercent');
-  console.log(bestGame);
-  console.log(totalGames);
-  console.log(completedPercent);
   bestGame.innerHTML = `Best Game: ${user.score}`;
   totalGames.innerHTML = `Games Played: ${user.games.length}`;
-  completedPercent.innerHTML = `Percentage Of Games Completed: ${calcWinPercent()}%`;
+  completedPercent.innerHTML = `Percentage Of Games Completed: ${Math.floor(calcWinPercent())}%`;
 }
 
 renderScoreboard();

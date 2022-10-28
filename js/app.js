@@ -6,7 +6,6 @@ let form = document.querySelector('form');
 let tbody = document.querySelector('tbody');
 
 //render the WordBoard on the game page
-
 Game.prototype.renderGame = function () {
   tbody.innerHTML = '';
 
@@ -31,7 +30,7 @@ Game.prototype.renderGame = function () {
     for (let m = 0; m < numOfPigs; m++) {
 
       let td = document.createElement('td');
-      td.setAttribute('class', 'pig' );
+      td.setAttribute('class', 'pig');
       td.innerHTML = '<img src="./img/cartoonPig.png" alt="pigs">';
       tr.appendChild(td);
     }
@@ -47,7 +46,7 @@ Game.prototype.renderGame = function () {
 
     for (let n = 0; n < numOfBulls; n++) {
       let td = document.createElement('td');
-      td.setAttribute('class', 'bull' );
+      td.setAttribute('class', 'bull');
       td.innerHTML = '<img src="./img/cartoonBull.png" alt="bulls">';
       tr.appendChild(td);
     }
@@ -61,8 +60,8 @@ Game.prototype.renderGame = function () {
 
     tbody.appendChild(tr);
     if (numOfBulls === 5) {
+      user.highScore();
       this.completed = true;
-
       modal();
       break;
     }
@@ -80,26 +79,16 @@ function modal() {
 
   modal.style.display = 'block';
 
-  // span.onlick = function() {
-  //   modal.style.display = 'none';
-  // };
-
-  // span.onclick = function(event) {
-  //   if(event.target === modal) {
-  //     modal.style.display = 'none';
-  //   }
-  // };
-
-  button1.onclick = function(event){
-    if(event.target === button1) {
+  button1.onclick = function (event) {
+    if (event.target === button1) {
       user.createNewGame();
       user.saveToLocalStorage();
       window.location.href = './gamepage.html';
     }
   };
 
-  button2.onclick = function(event){
-    if(event.target === button2) {
+  button2.onclick = function (event) {
+    if (event.target === button2) {
       window.location.href = './scoreboard.html';
     }
   };
@@ -107,27 +96,44 @@ function modal() {
 
 
 //ParseWord Function takes 2 strings and returns an array of 2 numbers
-
-function parseWord(correctWord, guessWord) {
-
+function parseWord(correctWord, guessWord){
+  
   let numberOfPigs = 0;
   let numberOfBulls = 0;
+  let correctWordArray = [];
+  let guessWordArray = [];
 
-  for (let i in correctWord) {
-    for (let j in guessWord) {
-      //console.log(`${guessWord[j]} inner word`);
-      if (correctWord[i] === guessWord[j] && i === j) {
+  // cast each string into an array
+  for(let i in correctWord){
+    correctWordArray.push(correctWord[i]);
+  }
+  for(let i in guessWord){
+    guessWordArray.push(guessWord[i]);
+  }
+
+//Determine Bulls and remove letters
+  for( let i in correctWordArray){
+    for(let j in guessWordArray){
+      if(correctWordArray[i]===guessWordArray[j] && i === j){
         numberOfBulls++;
-      } else if (correctWord[i] === guessWord[j]) {
-        numberOfPigs++;
-        break;
+        correctWordArray.splice(i,1,1);
+        guessWordArray.splice(i,1,0);
       }
     }
-    //console.log(correctWord[i]);
   }
-  let result = [numberOfPigs, numberOfBulls];
-  return (result);
+
+  for( let i in correctWordArray){
+    for(let j in guessWordArray){
+      if(correctWordArray[i]===guessWordArray[j] && i !== j){
+        numberOfPigs++;
+        correctWordArray.splice(i,1,1);
+      }
+    }
+  }
+  let result = [numberOfPigs,numberOfBulls];
+  return(result);
 }
+
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -142,9 +148,6 @@ function handleSubmit(event) {
 
 
 // 1. Attach eventlistenertotheDOM for the form
-
-
-
 
 form.addEventListener('submit', handleSubmit);
 
